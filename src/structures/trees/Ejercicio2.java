@@ -3,15 +3,19 @@ package structures.trees;
 import structures.node.Node;
 
 public class Ejercicio2 {
-    public void inverTree(Node<Integer> root) {
-        System.out.println("Arbol original:");
-        ordenHorizontal(root);
+    public void inverTree(Node<Integer> root){
+        System.out.println("Arbol original: ");
+        printTree(root);
         invertirRecursivo(root);
-        System.out.println("Arbol invertido:");
-        ordenHorizontal(root);
+        System.out.println();
+        System.out.println("Arbol invertido: ");
+        printTree(root);
     }
-    private void invertirRecursivo(Node<Integer> actual) {
-        if (actual == null) {
+    private void printTree(Node<Integer> root) {
+        printTreeRecursivo(root, 0);
+    }
+    private void invertirRecursivo(Node<Integer> actual){
+        if(actual == null){
             return;
         }
         Node<Integer> aux = actual.getLeft();
@@ -19,19 +23,17 @@ public class Ejercicio2 {
         actual.setRight(aux);
         invertirRecursivo(actual.getLeft());
         invertirRecursivo(actual.getRight());
+    
     }
-    public void ordenHorizontal(Node<Integer> root) {
-        ordenHorizontalRecursivo(root, 0);
-    }
-    private void ordenHorizontalRecursivo(Node<Integer> actual, int nivel) {
-        if (actual == null) {
+    private void printTreeRecursivo(Node<Integer> actual, int nivel){
+        if(actual == null){
             return;
         }
-        ordenHorizontalRecursivo(actual.getRight(), nivel + 1);
+        printTreeRecursivo(actual.getRight(), nivel + 1);
         for (int i = 0; i < nivel; i++) {
             System.out.print("    ");
         }
         System.out.println(actual.getValue());
-        ordenHorizontalRecursivo(actual.getLeft(), nivel + 1);
+        printTreeRecursivo(actual.getLeft(), nivel + 1);
     }
 }

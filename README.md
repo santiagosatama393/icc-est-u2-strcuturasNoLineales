@@ -18,39 +18,39 @@
 ## Implementacion del codigo 
 ![alt text](image.png)
 ### PreOrden IntTree
-![alt text](image-1.png)
+![alt text](assets/image-1.png)
 ### PosOrden IntTree
-![alt text](image-2.png)
+![alt text](assets/image-2.png)
 ### InOrden IntTree
-![alt text](image-3.png)
+![alt text](assets/image-3.png)
 ### Height IntTree
-![alt text](image-4.png)
+![alt text](assets/image-4.png)
 ### Weight IntTree
-![alt text](image-5.png)
+![alt text](assets/image-5.png)
 ### App.java IntTree
-![alt text](image-6.png)
+![alt text](assets/image-6.png)
 
 ## Salida de consola
-![alt text](image-7.png)
+![alt text](assets/image-7.png)
 
 ---
 **Descripción:** **Descripción:** En esta práctica se utilizó una clase genérica `BinaryTree<T>` para almacenar distintos tipos de datos que implementen `Comparable`. Se creó la clase `Persona` con los atributos nombre y edad, definiendo un criterio de comparación mediante el método `compareTo`. Además, en la clase `BinaryTree` se desarrollaron los recorridos básicos del árbol trabajados en la práctica anterior.
 
 
 ## Implementacion del codigo 
-![alt text](image-8.png)
+![alt text](assets/image-8.png)
 ### PreOrden BinaryTree<>
-![alt text](image-9.png)
+![alt text](assets/image-9.png)
 ### PosOrden BinaryTree<>
-![alt text](image-10.png)
+![alt text](assets/image-10.png)
 ### InOrden BinaryTree<>
-![alt text](image-11.png)
+![alt text](assets/image-11.png)
 ### Height BinaryTree<>
-![alt text](image-12.png)
+![alt text](assets/image-12.png)
 ### Weight BinaryTree<>
-![alt text](image-13.png)
+![alt text](assets/image-13.png)
 ### App.java BinaryTree<>
-![alt text](image-14.png)
+![alt text](assets/image-14.png)
 
 ## Salida de consola
-![alt text](image-15.png)
+![alt text](assets/image-15.png)
