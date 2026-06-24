@@ -16,7 +16,7 @@
 
 
 ## Implementacion del codigo 
-![alt text](image.png)
+![alt text](assets/image.png)
 ### PreOrden IntTree
 ![alt text](assets/image-1.png)
 ### PosOrden IntTree
