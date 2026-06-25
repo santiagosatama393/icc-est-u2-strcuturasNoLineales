@@ -18,47 +18,39 @@ public class App {
     }
 
     private static void runEjercicios() {
+        probarTodos(new int[]{});
+        probarTodos(new int[]{4});
+        probarTodos(new int[]{4, 2, 7, 1, 3, 6, 9});
+        probarTodos(new int[]{1, 2, 3, 4});
+    }
 
-        Ejercicio1 ejercicio1 = new Ejercicio1();
-        int[] numeros = {5, 3, 7, 2, 4, 6, 8};
+    public static void probarTodos(int[] numeros) {
+        Ejercicio1 ejercicioUno = new Ejercicio1();
+        Ejercicio2 ejercicioDos = new Ejercicio2();
+        Ejercicio3 ejercicioTres = new Ejercicio3();
+        Ejercicio4 ejercicioCuatro = new Ejercicio4();
 
-        System.out.println("------ Ejercicio 1 ------");
-        ejercicio1.insert(numeros);
+        System.out.println();
+        System.out.println("------ Caso de prueba ------");
 
-        Ejercicio2 ejercicio2 = new Ejercicio2();
-        int[] numeros2 = {4, 7, 2, 9, 6, 3, 1};
+        System.out.println();
+        System.out.println("Ejercicio Uno:");
+        ejercicioUno.insert(numeros);
 
-        BinaryTree<Integer> tree = new BinaryTree<>();
+        System.out.println();
+        System.out.println("Ejercicio Dos:");
+        ejercicioDos.inverTree(crearArbol(numeros).getRoot());
 
-        for (int numero : numeros2) {
-            tree.add(numero);
-        }
-
-        Node<Integer> root = tree.getRoot();
-
-        System.out.println("------ Ejercicio 2 ------");
-        ejercicio2.inverTree(root);
-
-        Ejercicio3 ejercicio3 = new Ejercicio3();
-        int[] numeros3 = {4, 2, 7, 1, 3, 6, 9};
-
-        BinaryTree<Integer> tree2 = new BinaryTree<>();
-
-        for (int numero : numeros3) {
-            tree2.add(numero);
-        }
-
-        System.out.println("------ Ejercicio 3 ------");
+        System.out.println();
+        System.out.println("Ejercicio Tres:");
 
         List<List<Node<Integer>>> niveles =
-                ejercicio3.listLevels(tree2.getRoot());
+                ejercicioTres.listLevels(crearArbol(numeros).getRoot());
 
         for (int i = 0; i < niveles.size(); i++) {
-
             List<Node<Integer>> nivel = niveles.get(i);
 
             for (int j = 0; j < nivel.size(); j++) {
-
                 System.out.print(nivel.get(j).getValue());
 
                 if (j < nivel.size() - 1) {
@@ -69,80 +61,80 @@ public class App {
             System.out.println();
         }
 
-        Ejercicio4 ejercicio4 = new Ejercicio4();
-        int[] numeros4 = {10, 5, 3, 1};
+        System.out.println();
+        System.out.println("Ejercicio Cuatro:");
+        Node<Integer> root = crearArbol(numeros).getRoot();
+        System.out.println("Profundidad máxima: " + ejercicioCuatro.maxDepth(root));
+    }
 
-        BinaryTree<Integer> tree3 = new BinaryTree<>();
+    public static BinaryTree<Integer> crearArbol(int[] numeros) {
+        BinaryTree<Integer> tree = new BinaryTree<>();
 
-        for (int numero : numeros4) {
-            tree3.add(numero);
+        for (int numero : numeros) {
+            tree.add(numero);
         }
 
-        Node<Integer> root3 = tree3.getRoot();
-
-        System.out.println("------ Ejercicio 4 ------");
-        System.out.println(ejercicio4.maxDepth(root3));
+        return tree;
     }
 
     private static void runBinaryTree() {
+        BinaryTree<Persona> arbolPersona = new BinaryTree<>();
 
-        BinaryTree<String> arbolStrings = new BinaryTree<>();
-
-        BinaryTree<Persona> arbolPersonas = new BinaryTree<>();
-
-        arbolPersonas.add(new Persona("Pablo", 30));
-        arbolPersonas.add(new Persona("Ana", 25));
-        arbolPersonas.add(new Persona("Luis", 35));
-        arbolPersonas.add(new Persona("Maria", 28));
-
-        System.out.println("-----Preorden-----");
-        arbolPersonas.preOrden();
+        arbolPersona.add(new Persona("Alice", 30));
+        arbolPersona.add(new Persona("Bob", 25));
+        arbolPersona.add(new Persona("Charlie", 35));
+        arbolPersona.add(new Persona("David", 28));
+        arbolPersona.add(new Persona("Eve", 32));
 
         System.out.println();
-        System.out.println("-----PosOrden-----");
-        arbolPersonas.posOrden();
+        System.out.println("Recorrido InOrden:");
+        arbolPersona.inOrden();
 
         System.out.println();
-        System.out.println("-----InOrden-----");
-        arbolPersonas.inOrden();
+        System.out.println("Recorrido PreOrden:");
+        arbolPersona.preOrden();
 
         System.out.println();
-        System.out.println("-----Height-----");
-        System.out.println(arbolPersonas.getHeight());
+        System.out.println("Recorrido PosOrden:");
+        arbolPersona.posOrden();
 
         System.out.println();
-        System.out.println("-----Weight-----");
-        System.out.println(arbolPersonas.getWeight());
+        System.out.println("Altura del árbol:");
+        System.out.println(arbolPersona.getHeight());
+
+        System.out.println();
+        System.out.println("Peso del árbol:");
+        System.out.println(arbolPersona.getWeight());
     }
 
     private static void runIntTree() {
+        IntTree arbol = new IntTree();
 
-        IntTree arbolNumeros = new IntTree();
-
-        arbolNumeros.add(50);
-        arbolNumeros.add(10);
-        arbolNumeros.add(30);
-        arbolNumeros.add(60);
-        arbolNumeros.add(70);
-        arbolNumeros.add(55);
-
-        System.out.println("-----Preorden-----");
-        arbolNumeros.preOrden();
+        arbol.add(50);
+        arbol.add(10);
+        arbol.add(60);
+        arbol.add(30);
+        arbol.add(55);
+        arbol.add(70);
 
         System.out.println();
-        System.out.println("-----PosOrden-----");
-        arbolNumeros.posOrden();
+        System.out.println("Recorrido InOrden:");
+        arbol.inOrden();
 
         System.out.println();
-        System.out.println("-----InOrden-----");
-        arbolNumeros.inOrden();
+        System.out.println("Recorrido PreOrden:");
+        arbol.preOrden();
 
         System.out.println();
-        System.out.println("-----Height-----");
-        System.out.println(arbolNumeros.getHeight());
+        System.out.println("Recorrido PosOrden:");
+        arbol.posOrden();
 
         System.out.println();
-        System.out.println("-----Weight-----");
-        System.out.println(arbolNumeros.getWeight());
+        System.out.println("Altura del árbol:");
+        System.out.println(arbol.getHeight());
+
+        System.out.println();
+        System.out.println("Peso del árbol:");
+        System.out.println(arbol.getWeight());
     }
 }

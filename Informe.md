@@ -60,13 +60,229 @@ Esta clase permite invertir las ramas de un árbol binario. Primero se muestra e
 ![alt text](assets/image-22.png)
 
 ### Salida de Consola
-![alt text](assets/image-23.png)
+![alt text](assets/image25.png)
 
 
 ### App.java
 ![alt text](assets/image-24.png)
 
+
+
+## CASOS DE PRUEBA
+
+  
+    probarTodos(new int[]{});
+    probarTodos(new int[]{4});
+    probarTodos(new int[]{4, 2, 7, 1, 3, 6, 9});
+    probarTodos(new int[]{1, 2, 3, 4});
+````
+
+## Arbol vacío
+
+````java
+Ejercicio Uno:
+
+
+Imprimiendo el árbol
+
+
+Ejercicio Dos
+
+Árbol normal:
+
+Árbol invertido:
+
+
+Ejercicio Tres
+
+Árbol normal:
+
+
+Niveles en listas enlazadas:
+
+
+Ejercicio Cuatro:
+
+Arbol normal:
+Profundidad máxima: 0
+````
+
+## Arbol con un solo nodo
+
+````bash
+Ejercicio Uno:
+
+Node [value=4]
+
+Imprimiendo el árbol
+4
+
+
+Ejercicio Dos
+
+Árbol normal:
+4
+
+Árbol invertido:
+4
+
+
+Ejercicio Tres
+
+Árbol normal:
+4
+
+
+Niveles en listas enlazadas:
+
+4
+
+Ejercicio Cuatro:
+
+Arbol normal:
+4
+Profundidad máxima: 1
+
+````
+## Arbol con varios niveles
+
+````bash
+Ejercicio Uno:
+
+Node [value=1]
+Node [value=2]
+Node [value=3]
+Node [value=4]
+Node [value=6]
+Node [value=7]
+Node [value=9]
+
+Imprimiendo el árbol
+                9
+        7
+                6
+4
+                3
+        2
+                1
+
+
+Ejercicio Dos
+
+Árbol normal:
+                9
+        7
+                6
+4
+                3
+        2
+                1
+
+Árbol invertido:
+                1
+        2
+                3
+4
+                6
+        7
+                9
+
+
+Ejercicio Tres
+
+Árbol normal:
+                9
+        7
+                6
+4
+                3
+        2
+                1
+
+
+Niveles en listas enlazadas:
+
+4
+2 -> 7
+1 -> 3 -> 6 -> 9
+
+Ejercicio Cuatro:
+
+Arbol normal:
+                9
+        7
+                6
+4
+                3
+        2
+                1
+Profundidad máxima: 3
+````
+## Arbol solo hacia la derecha
+
+````bash
+Ejercicio Uno:
+
+Node [value=1]
+Node [value=2]
+Node [value=3]
+Node [value=4]
+
+Imprimiendo el árbol
+                        4
+                3
+        2
+1
+
+
+Ejercicio Dos
+
+Árbol normal:
+                        4
+                3
+        2
+1
+
+Árbol invertido:
+1
+        2
+                3
+                        4
+
+
+Ejercicio Tres
+
+Árbol normal:
+                        4
+                3
+        2
+1
+
+
+Niveles en listas enlazadas:
+
+1
+2
+3
+4
+
+Ejercicio Cuatro:
+
+Arbol normal:
+                        4
+                3
+        2
+1
+Profundidad máxima: 4
+
+''''
+
+
+
+
+
 ## Conslusiones
+
 ### Conclusión 1:
 Esta práctica me permitió comprender mejor cómo funcionan los árboles binarios. Aprendí a realizar inserciones, invertir el árbol, recorrer sus niveles y calcular su profundidad.
 ### Conclusión 2:
@@ -74,3 +290,4 @@ El desarrollo de los ejercicios reforzó el uso de la recursividad y me ayudó a
 
 ### Conclusión 3:
 Implementar y probar cada método me permitió mejorar mi lógica de programación. También aprendí la importancia de verificar que el código funcione correctamente antes de finalizar la práctica.
+
