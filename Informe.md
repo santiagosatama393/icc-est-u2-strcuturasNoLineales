@@ -60,7 +60,7 @@ Esta clase permite invertir las ramas de un árbol binario. Primero se muestra e
 ![alt text](assets/image-22.png)
 
 ### Salida de Consola
-![alt text](assets/image25.png)
+![alt text](image.png)
 
 
 ### App.java
@@ -285,6 +285,7 @@ Profundidad máxima: 4
 
 ### Conclusión 1:
 Esta práctica me permitió comprender mejor cómo funcionan los árboles binarios. Aprendí a realizar inserciones, invertir el árbol, recorrer sus niveles y calcular su profundidad.
+
 ### Conclusión 2:
 El desarrollo de los ejercicios reforzó el uso de la recursividad y me ayudó a entender la relación entre los nodos para resolver diferentes problemas.
 
